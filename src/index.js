@@ -1,43 +1,23 @@
 "// Entry point" 
-// Smooth Scroll for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
-
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
-// Form Validation
+// Form validation
 document.querySelector('form').addEventListener('submit', function (e) {
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const message = document.getElementById('message');
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-    let isValid = true;
-
-    if (name.value.trim() === '') {
-        alert('Name is required');
-        isValid = false;
-    }
-
-    if (email.value.trim() === '' || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value)) {
-        alert('Please enter a valid email');
-        isValid = false;
-    }
-
-    if (message.value.trim() === '') {
-        alert('Message cannot be empty');
-        isValid = false;
-    }
-
-    if (!isValid) {
+    if (!name || !email || !message) {
         e.preventDefault();
+        alert('Please fill in all fields.');
     }
 });
