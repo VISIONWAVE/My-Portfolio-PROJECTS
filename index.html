@@ -49,21 +49,39 @@
     <section id="portfolio" class="portfolio">
         <h2>My Work</h2>
         <div class="projects">
-            <div class="project">
+            <div class="project-container">
                 <img src="./assets/images/calculator-project1.png" alt="Project 1">
                 <h3>Project Title: Simple Web Calculator</h3>
                 <p>The Simple Web Calculator is an interactive web application that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The project utilizes HTML for the structure of the calculator interface, CSS for styling and layout enhancements, and JavaScript for implementing the calculation logic.</p>
-                <a href="https://visionwave.github.io/CALCULATOR/" class="btn">View Project</a>
+                <a href="https://visionwave.github.io/CALCULATOR/" id="read-more-btn">View Project</a>
             </div>
-            <div class="project">
-                <img src="./assets/images/calculator-project1.png" alt="Project 2">
-                <h3>Calculator</h3>
-                <p>A brief description of the project.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-        </div>
-    </section>
-
+            
+    <!-- Modal for More Details -->
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Simple Web Calculator - Full Details</h3>
+      <p>
+        This web calculator project demonstrates basic frontend development
+        skills using HTML, CSS, and JavaScript. Users can perform operations like:
+      </p>
+      <ul>
+        <li>Addition</li>
+        <li>Subtraction</li>
+        <li>Multiplication</li>
+        <li>Division</li>
+      </ul>
+      <p>
+        Features:
+        <ul>
+          <li>Interactive design</li>
+          <li>Keyboard input support</li>
+          <li>Responsive layout for mobile and desktop</li>
+        </ul>
+      </p>
+    </div>
+  </div>    
+</section>
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
